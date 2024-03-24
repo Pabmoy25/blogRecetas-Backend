@@ -4,6 +4,7 @@ import cors from 'cors'
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import recetasRouter from './src/routes/recetas.routes.js';
 
 const app = express();
 
@@ -23,8 +24,6 @@ app.use(express.static(path.join(__dirname, '/public')))
 
 
 
+app.use('/', recetasRouter)
 
-app.get('/nuevo', (req, res) =>{
-    console.log('porcesando una solicitud get');
-    res.send('respueta del backend');
-})
+
