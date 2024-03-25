@@ -40,3 +40,7 @@ const recetaSchema = new Schema({
     MaxLength: 1000,
   },
 });
+
+const Receta = mongoose.model('receta', recetaSchema);
+
+export default Receta;
