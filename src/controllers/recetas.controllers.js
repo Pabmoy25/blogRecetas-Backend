@@ -1,7 +1,14 @@
 import Receta from "../models/receta.js"
 
-export const listaRecetas = (req,res)=>{
-    res.send('enviando ')
+export const listarRecetas = async(req,res)=>{
+    try {
+        const recetas = await Receta.find()
+        res.status(200).json(recetas)
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({mensaje: "Error al buscar las recetas"})
+    }
+    
     }
 
 export const crearReceta = async (req, res)=>{
