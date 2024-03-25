@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import recetasRouter from './src/routes/recetas.routes.js';
+import './src/database/database.js'
 
 const app = express();
 
