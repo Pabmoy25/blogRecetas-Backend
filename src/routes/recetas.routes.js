@@ -5,5 +5,4 @@ const router = Router();
 
 router.route('/recetas').get(listaRecetas).post(crearReceta)
 
-
 export default router
