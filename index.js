@@ -6,6 +6,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import recetasRouter from './src/routes/recetas.routes.js';
 import './src/database/database.js'
+import usuarioRouter from './src/routes/usuario.routes.js';
+
+
 
 const app = express();
 
@@ -23,5 +26,6 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, '/public')))
 
 app.use('/', recetasRouter)
+app.use('/', usuarioRouter)
 
 
